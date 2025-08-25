@@ -5,7 +5,8 @@ const VITE_EMAILJS_TEMPLATE_ID = "template_1pw9ooj"
 const VITE_EMAILJS_PUBLIC_KEY = "yyrpXQUXxpkvAGyp9"
 interface EmailParams {
   fromName: string;
-  fullName: string;
+  firstName: string;
+  lastName: string;
   userEmail: string;
   userPhone: string;
   platform: string;
@@ -18,7 +19,8 @@ export const sendEmail = async (params: EmailParams) => {
   const userId = VITE_EMAILJS_PUBLIC_KEY;
   const templateParams = {
     from_name: params.fromName,
-    fullName: params.fromName,
+    firstName: params.firstName,
+    lastName: params.lastName,
     user_email: params.userEmail,
     user_phone: params.userPhone,
     platform: params.platform,

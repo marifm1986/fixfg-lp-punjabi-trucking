@@ -44,7 +44,8 @@ export const Modal: React.FC<ModalProps> = ({
     try {
       await sendEmail({
         fromName: `Punjabi Trucking`,
-        fullName: `${formData.firstName} ${formData.lastName}`,
+        firstName: formData.firstName,
+        lastName: formData.lastName,
         userEmail: formData.email,
         userPhone: formData.phone,
         platform: formData.platform,
